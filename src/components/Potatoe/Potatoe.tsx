@@ -21,7 +21,7 @@ const Potatoe = () => {
   if (!image) return null
 
   return (
-    <div className='h-96 w-96'>
+    <div className='h-56 w-56 animate-spin-slow'>
       <GatsbyImage
         className='h-full w-full'
         objectFit='contain'
