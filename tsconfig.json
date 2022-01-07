@@ -22,7 +22,8 @@
       "@templates/*": ["src/templates/*"],
       "@styles/*": ["src/styles/*"],
       "@cms/*": ["src/cms/*"],
-      "@layout": ["src/layout/index.ts"]
+      "@layout": ["src/layout/index.ts"],
+      "@store/*": ["src/store/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

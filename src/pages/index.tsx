@@ -1,6 +1,14 @@
+import { useBackgroundStore } from '@src/store/backgroundStore'
 import React from 'react'
-import Potatoe from '@src/components/Potatoe'
+import cn from 'classnames'
+import Bio from '@src/components/Bio'
 
 export default function Home() {
-  return <Potatoe />
+  const { bg } = useBackgroundStore()
+
+  return (
+    <div className={cn('page h-screen w-full p-10', bg)}>
+      <Bio />
+    </div>
+  )
 }

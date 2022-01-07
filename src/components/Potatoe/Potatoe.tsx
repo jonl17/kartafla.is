@@ -10,7 +10,7 @@ const Potatoe = () => {
         absolutePath: { regex: "/potato/" }
       ) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
@@ -20,11 +20,11 @@ const Potatoe = () => {
 
   if (!image) return null
 
-  console.log(image)
-
   return (
-    <div>
+    <div className='h-96 w-96'>
       <GatsbyImage
+        className='h-full w-full'
+        objectFit='contain'
         image={image.childImageSharp.gatsbyImageData}
         alt='Potatoe'
       />

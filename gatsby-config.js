@@ -17,6 +17,7 @@ const gatsbyPluginAliasImports = {
       '@styles': path.resolve(__dirname, 'src/styles'),
       '@cms': path.resolve(__dirname, 'src/cms'),
       '@layout': path.resolve(__dirname, 'src/layout/index.ts'),
+      '@store': path.resolve(__dirname, 'src/store'),
     },
     extensions: [`ts`, `tsx`],
   },
@@ -39,5 +40,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     gatsbySourceFileSystem,
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-sass',
   ],
 }
