@@ -12,9 +12,13 @@ const Button = ({ color }: IButton) => {
   const { toggleBg, bg } = useBackgroundStore()
   return (
     <button
-      className={cn(color, 'h-5 w-5 cursor-pointer', {
-        border: color === bg,
-      })}
+      className={cn(
+        color,
+        'h-5 w-5 cursor-pointer hover:opacity-75',
+        {
+          border: color === bg,
+        }
+      )}
       onClick={() => toggleBg(color)}
     />
   )
