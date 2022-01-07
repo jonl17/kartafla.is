@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Balkan;
+    src: url('/font/regular.ttf') format('truetype');
+    font-weight: regular;
+  }
+  @font-face {
+    font-family: Balkan;
+    src: url('/font/bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span {
+    @apply font-balkan;
+  }
+}
+
+p,
+a,
+span {
+  @apply text-parag;
+}

@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className={cn('page h-screen w-full p-10', bg)}>
       <Bio />
-      <div className='absolute h-screen w-screen top-0 left-0 grid place-items-center'>
+      <div className='absolute h-screen w-screen top-0 left-0 grid place-items-center pointer-events-none'>
         <Potatoe />
       </div>
     </div>

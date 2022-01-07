@@ -10,6 +10,12 @@ module.exports = {
       },
       animation: { 'spin-slow': 'spin 10s linear infinite' },
     },
+    fontFamily: {
+      balkan: ['balkan', 'sans-serif'],
+    },
+    fontSize: {
+      parag: ['14px', '1'],
+    },
   },
   plugins: [],
 }
