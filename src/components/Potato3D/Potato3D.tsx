@@ -47,8 +47,8 @@ export default () => {
           enableZoom={false}
           autoRotateSpeed={5}
           autoRotate={true}
-          minAzimuthAngle={-Math.PI / 4}
-          minPolarAngle={0}
+          maxPolarAngle={Math.PI / 4}
+          minPolarAngle={Math.PI / 1}
         />
       </Suspense>
     </Canvas>
