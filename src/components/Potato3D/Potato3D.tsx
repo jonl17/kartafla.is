@@ -47,8 +47,7 @@ export default () => {
           enableZoom={false}
           autoRotateSpeed={5}
           autoRotate={true}
-          maxPolarAngle={Math.PI / 4}
-          minPolarAngle={Math.PI / 1}
+          setPolarAngle={Math.PI / 1}
         />
       </Suspense>
     </Canvas>
