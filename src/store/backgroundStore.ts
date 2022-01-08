@@ -1,24 +1,47 @@
 import create from 'zustand'
 
+export type AvailableBackgroundColors =
+  | 'white'
+  | 'gray'
+  | 'green'
+  | 'black'
+
+export interface IColor {
+  name: AvailableBackgroundColors
+  className: string
+  value: string
+}
 interface IBackground {
-  bg: string
-  toggleBg: (bg: string) => void
+  currentColor: IColor
+  toggleCurrentColor: (
+    colorName: AvailableBackgroundColors
+  ) => void
+  colorDict: IColor[]
 }
 
-// const useBackgroundStore = create<IBackground>(set => ({
-//   bg: 'bg-white',
-//   toggleBg: (chosenBg: string) =>
-//     set(() => ({
-//       bg: chosenBg,
-//     })),
-// }))
+const INITIAL_VALUE: IColor = {
+  name: 'white',
+  className: 'bg-white',
+  value: '#fff',
+}
+
+const AVAILABLE_COLORS: IColor[] = [
+  { name: 'green', className: 'bg-green', value: '#27AE60' },
+  { name: 'white', className: 'bg-white', value: '#F2F2F2' },
+  { name: 'gray', className: 'bg-gray', value: '#C4C4C4' },
+  { name: 'black', className: 'bg-black', value: '#333333' },
+]
 
 const useBackgroundStore = create<IBackground>(set => ({
-  bg: 'bg-white',
-  toggleBg: (chosenBg: string) =>
+  currentColor: INITIAL_VALUE,
+  toggleCurrentColor: (colorName: AvailableBackgroundColors) =>
     set(() => ({
-      bg: chosenBg,
+      currentColor:
+        AVAILABLE_COLORS.find(
+          color => color.name === colorName
+        ) ?? INITIAL_VALUE,
     })),
+  colorDict: AVAILABLE_COLORS,
 }))
 
 export { useBackgroundStore }

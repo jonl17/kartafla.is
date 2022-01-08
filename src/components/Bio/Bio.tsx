@@ -3,10 +3,14 @@ import React from 'react'
 import cn from 'classnames'
 
 const Bio = () => {
-  const { bg } = useBackgroundStore()
+  const { currentColor } = useBackgroundStore()
   return (
     <div className='w-1/2'>
-      <p className={cn({ 'text-white': bg === 'bg-black' })}>
+      <p
+        className={cn({
+          'text-white': currentColor.name === 'black',
+        })}
+      >
         kartafla is a web design studio based in Iceland. Driven
         to evolve our craft and honour the legacy of contemporary
         design, we provide services to a range of organizations,

@@ -1,17 +1,8 @@
-import React, { useLayoutEffect, Suspense, useRef } from 'react'
-import {
-  Canvas,
-  extend,
-  useThree,
-  useFrame,
-} from '@react-three/fiber'
+import React, { useLayoutEffect, Suspense } from 'react'
+import { Canvas, extend } from '@react-three/fiber'
 import * as THREE from 'three'
-import {
-  useGLTF,
-  OrbitControls,
-  PresentationControls,
-  Environment,
-} from '@react-three/drei'
+import { useGLTF, OrbitControls } from '@react-three/drei'
+import { useBackgroundStore } from '@src/store/backgroundStore'
 
 extend({ OrbitControls })
 
@@ -32,6 +23,8 @@ const Potato = () => {
 }
 
 export default () => {
+  const { currentColor } = useBackgroundStore()
+
   const isBrowser = typeof window !== 'undefined'
 
   if (!isBrowser) return null
@@ -43,14 +36,19 @@ export default () => {
       dpr={[1, 2]}
       camera={{ position: [0, 0, 1], fov: 25 }}
     >
-      <ambientLight intensity={0.75} />
+      <ambientLight
+        color={currentColor.value}
+        intensity={0.85}
+      />
       <spotLight position={[5, 5, 5]} penumbra={1} castShadow />
       <Suspense fallback={null}>
         <Potato />
         <OrbitControls
           enableZoom={false}
-          autoRotateSpeed={10}
+          autoRotateSpeed={5}
           autoRotate={true}
+          minAzimuthAngle={-Math.PI / 4}
+          minPolarAngle={0}
         />
       </Suspense>
     </Canvas>
