@@ -40,7 +40,7 @@ export default () => {
         color={currentColor.value}
         intensity={0.85}
       />
-      <spotLight position={[5, 5, 5]} penumbra={1} castShadow />
+      <spotLight position={[5, -2, 1]} penumbra={1} castShadow />
       <Suspense fallback={null}>
         <Potato />
         <OrbitControls
