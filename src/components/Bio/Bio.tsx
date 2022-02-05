@@ -27,7 +27,11 @@ const Contact = () => {
         >
           {EMAIL}
         </p>
-        <p className='mt-2'>
+        <p
+          className={cn('mt-2', {
+            'text-white': currentColor.name === 'black',
+          })}
+        >
           {!copied && 'smelltu til að afrita'}
         </p>
       </button>
