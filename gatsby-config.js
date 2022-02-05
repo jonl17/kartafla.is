@@ -12,12 +12,13 @@ const gatsbyPluginAliasImports = {
   options: {
     alias: {
       '@src': path.resolve(__dirname, 'src'),
-      '@cmp': path.resolve(__dirname, 'src/cmp'),
+      '@cmp': path.resolve(__dirname, 'src/components'),
       '@templates': path.resolve(__dirname, 'src/templates'),
       '@styles': path.resolve(__dirname, 'src/styles'),
       '@cms': path.resolve(__dirname, 'src/cms'),
       '@layout': path.resolve(__dirname, 'src/layout/index.ts'),
       '@store': path.resolve(__dirname, 'src/store'),
+      '@types': path.resolve(__dirname, 'src/types.ts'),
     },
     extensions: [`ts`, `tsx`],
   },

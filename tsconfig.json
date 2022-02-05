@@ -17,13 +17,14 @@
     "noUnusedLocals": true,
     "paths": {
       "@src/*": ["src/*"],
-      "@cmp/*": ["src/cmp/*"],
+      "@cmp/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
       "@templates/*": ["src/templates/*"],
       "@styles/*": ["src/styles/*"],
       "@cms/*": ["src/cms/*"],
       "@layout": ["src/layout/index.ts"],
-      "@store/*": ["src/store/*"]
+      "@store/*": ["src/store/*"],
+      "@types": ["src/types.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
