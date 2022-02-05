@@ -16,13 +16,16 @@ const Contact = () => {
 
   return (
     <div className='w-1/2 z-10 absolute'>
-      <button className='flex' onClick={() => clip()}>
+      <button className='flex flex-col' onClick={() => clip()}>
         <p
           className={cn({
             'text-white': currentColor.name === 'black',
           })}
         >
-          {!copied ? EMAIL + ' smelltu til að afrita' : EMAIL}
+          {EMAIL}
+        </p>
+        <p className='mt-2'>
+          {!copied && 'smelltu til að afrita'}
         </p>
       </button>
     </div>
