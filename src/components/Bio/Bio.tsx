@@ -16,7 +16,10 @@ const Contact = () => {
 
   return (
     <div className='w-1/2 z-10 absolute'>
-      <button className='flex flex-col' onClick={() => clip()}>
+      <button
+        className='flex flex-col text-left hover:underline'
+        onClick={() => clip()}
+      >
         <p
           className={cn({
             'text-white': currentColor.name === 'black',
