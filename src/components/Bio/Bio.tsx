@@ -22,7 +22,7 @@ const Contact = () => {
             'text-white': currentColor.name === 'black',
           })}
         >
-          {!copied ? EMAIL + ' <- smelltu til að afrita' : EMAIL}
+          {!copied ? EMAIL + ' smelltu til að afrita' : EMAIL}
         </p>
       </button>
     </div>
