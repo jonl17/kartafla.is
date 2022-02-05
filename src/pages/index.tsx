@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div
       className={cn(
-        'page h-screen w-full p-5 lg:p-10',
+        'page h-screen w-full p-5 lg:p-10 transition-colors',
         currentColor.className
       )}
     >
