@@ -7,10 +7,7 @@ const Layout: React.FC = ({ children }) => {
     <>
       <SEO />
       <main className='main'>
-        <div>
-          <ControlPanel className='w-32 absolute right-10 top-10' />
-          {children}
-        </div>
+        <div>{children}</div>
       </main>
     </>
   )
