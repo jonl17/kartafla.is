@@ -22,7 +22,9 @@ const Contact = () => {
       >
         <p
           className={cn({
-            'text-white': currentColor.name === 'black',
+            'text-white':
+              currentColor.name === 'black' ||
+              currentColor.name === 'red',
           })}
         >
           {EMAIL}

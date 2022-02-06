@@ -34,7 +34,9 @@ const Projects = ({ className }: Props) => {
                 className={cn(
                   'lowercase hover:underline mx-12 lg:mx-24',
                   {
-                    'text-white': currentColor.name === 'black',
+                    'text-white':
+                      currentColor.name === 'black' ||
+                      currentColor.name === 'red',
                   }
                 )}
               >
@@ -50,7 +52,9 @@ const Projects = ({ className }: Props) => {
                 className={cn(
                   'lowercase hover:underline mx-24',
                   {
-                    'text-white': currentColor.name === 'black',
+                    'text-white':
+                      currentColor.name === 'black' ||
+                      currentColor.name === 'red',
                   }
                 )}
               >
