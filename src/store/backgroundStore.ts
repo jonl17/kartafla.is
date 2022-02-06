@@ -5,6 +5,7 @@ export type AvailableBackgroundColors =
   | 'gray'
   | 'green'
   | 'black'
+  | 'red'
 
 export interface IColor {
   name: AvailableBackgroundColors
@@ -30,6 +31,7 @@ const AVAILABLE_COLORS: IColor[] = [
   { name: 'white', className: 'bg-white', value: '#F2F2F2' },
   { name: 'gray', className: 'bg-gray', value: '#C4C4C4' },
   { name: 'black', className: 'bg-black', value: '#333333' },
+  { name: 'red', className: 'bg-red', value: '#EB5757' },
 ]
 
 const useBackgroundStore = create<IBackground>(set => ({

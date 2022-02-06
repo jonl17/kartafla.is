@@ -21,7 +21,7 @@ export default function Home() {
         <Potato3D />
       </div>
       <ControlPanel className='w-32 absolute top-5 right-5 lg:right-10 lg:top-10' />
-      <Projects className='absolute bottom-52 left-0' />
+      <Projects />
     </div>
   )
 }

@@ -23,28 +23,42 @@ const Projects = ({ className }: Props) => {
     <section
       className={cn(
         className,
-        'projects overflow-hidden w-full absolute bottom-0 p-5 lg:p-10 z-10'
+        'absolute bottom-52 left-0 overflow-x-hidden projects overflow-hidden w-full p-5 lg:p-10 z-10'
       )}
     >
-      <div className='flex flex-col lg:flex-row  justify-between w-full'>
-        <p
-          className={cn('mb-2 lg:mb-0', {
-            'text-white': currentColor.name === 'black',
-          })}
-        >
-          nýtt:
-        </p>
-        {PROJECTS.map((project, key) => (
-          <a href={project.url} target='_blank' key={key}>
-            <p
-              className={cn('lowercase hover:underline', {
-                'text-white': currentColor.name === 'black',
-              })}
-            >
-              {project.label}
-            </p>
-          </a>
-        ))}
+      <div className='relative'>
+        <div className='whitespace-nowrap flex animate-marquee'>
+          {PROJECTS.map((project, key) => (
+            <a href={project.url} target='_blank' key={key}>
+              <p
+                className={cn(
+                  'lowercase hover:underline mx-12 lg:mx-24',
+                  {
+                    'text-white': currentColor.name === 'black',
+                  }
+                )}
+              >
+                {project.label}
+              </p>
+            </a>
+          ))}
+        </div>
+        <div className='whitespace-nowrap flex animate-marquee2 absolute bottom-0'>
+          {PROJECTS.map((project, key) => (
+            <a href={project.url} target='_blank' key={key}>
+              <p
+                className={cn(
+                  'lowercase hover:underline mx-24',
+                  {
+                    'text-white': currentColor.name === 'black',
+                  }
+                )}
+              >
+                {project.label}
+              </p>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   )
