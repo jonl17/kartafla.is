@@ -1,34 +1,30 @@
 import { useBackgroundStore } from '@src/store/backgroundStore'
-import React, { useState } from 'react'
+import React from 'react'
 import cn from 'classnames'
 
 const EMAIL = 'kartafla.info@gmail.com'
 
 const Contact = () => {
-  const [copied, setCopied] = useState(false)
-
   const { currentColor } = useBackgroundStore()
 
   const clip = () => {
     navigator.clipboard.writeText(EMAIL)
-    setCopied(true)
   }
 
   return (
     <div className='w-1/2 z-10 absolute'>
       <button
-        className='flex flex-col text-left hover:underline'
-        onClick={() => clip()}
-      >
-        <p
-          className={cn({
+        className={cn(
+          'flex flex-col text-left hover:underline',
+          {
             'text-white':
               currentColor.name === 'black' ||
               currentColor.name === 'red',
-          })}
-        >
-          {EMAIL}
-        </p>
+          }
+        )}
+        onClick={() => clip()}
+      >
+        <p>{EMAIL}</p>
       </button>
     </div>
   )

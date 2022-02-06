@@ -28,12 +28,12 @@ const SEO = () => {
       <meta
         name='og:image'
         property='og:image'
-        content='/images/potato.png'
+        content='/images/seo-potato.png'
       />
       <meta
         name='twitter:image'
         property='twitter:image'
-        content='/images/potato.png'
+        content='/images/seo-potato.png'
       />
       <meta name='twitter:card' content='summary_large_image' />
       <link rel='favicon' href='/favicon.ico' />

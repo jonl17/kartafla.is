@@ -23,7 +23,7 @@ const Projects = ({ className }: Props) => {
     <section
       className={cn(
         className,
-        'absolute bottom-52 left-0 overflow-x-hidden projects overflow-hidden w-full p-5 lg:p-10 z-10'
+        'absolute bottom-24 left-0 overflow-x-hidden projects overflow-hidden w-full p-5 lg:p-10 z-10'
       )}
     >
       <div className='relative'>
