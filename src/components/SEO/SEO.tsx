@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import seoPotato from './seo-potato.png'
 
 const DESCRIPTION =
   'Hönnunar og forritunar tvíeykið kartafla tekur að sér verkefni, stór og smá.'
@@ -28,12 +29,12 @@ const SEO = () => {
       <meta
         name='og:image'
         property='og:image'
-        content='/images/seo-potato.png'
+        content={seoPotato}
       />
       <meta
         name='twitter:image'
         property='twitter:image'
-        content='/images/seo-potato.png'
+        content={seoPotato}
       />
       <meta name='twitter:card' content='summary_large_image' />
       <link rel='favicon' href='/favicon.ico' />
