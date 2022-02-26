@@ -20,12 +20,6 @@ interface IBackground {
   colorDict: IColor[]
 }
 
-const INITIAL_VALUE: IColor = {
-  name: 'white',
-  className: 'bg-white',
-  value: '#fff',
-}
-
 const AVAILABLE_COLORS: IColor[] = [
   { name: 'green', className: 'bg-green', value: '#27AE60' },
   { name: 'white', className: 'bg-white', value: '#F2F2F2' },
@@ -33,6 +27,8 @@ const AVAILABLE_COLORS: IColor[] = [
   { name: 'black', className: 'bg-black', value: '#333333' },
   { name: 'red', className: 'bg-red', value: '#EB5757' },
 ]
+
+const INITIAL_VALUE = AVAILABLE_COLORS[4]
 
 const useBackgroundStore = create<IBackground>(set => ({
   currentColor: INITIAL_VALUE,
