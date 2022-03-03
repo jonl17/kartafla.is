@@ -13,6 +13,7 @@ module.exports = {
         'spin-slow': 'spin 10s linear infinite',
         marquee: 'marquee 50s linear infinite',
         marquee2: 'marquee2 50s linear infinite',
+        hide: 'hide 1s forwards',
       },
       keyframes: {
         marquee: {
@@ -23,6 +24,11 @@ module.exports = {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
+        hide: {
+          '0%': { opacity: '1' },
+          '99%': { opacity: '0' },
+          '100%': { opacity: '0' },
+        },
       },
     },
     fontFamily: {
@@ -30,6 +36,8 @@ module.exports = {
     },
     fontSize: {
       parag: ['14px', '1'],
+      huge: ['300px'],
+      large: ['74px'],
     },
   },
   plugins: [],

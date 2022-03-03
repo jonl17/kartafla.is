@@ -6,7 +6,7 @@ const Potatoe = () => {
   const result = useStaticQuery(graphql`
     {
       file(
-        sourceInstanceName: { eq: "assets" }
+        sourceInstanceName: { eq: "images" }
         absolutePath: { regex: "/potato/" }
       ) {
         childImageSharp {

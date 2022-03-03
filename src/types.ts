@@ -3,3 +3,8 @@ export interface ISlice {
   primary: any
   type: string
 }
+
+export interface ISound {
+  publicURL: string
+  name: string
+}
