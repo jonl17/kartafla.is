@@ -24,12 +24,25 @@ const gatsbyPluginAliasImports = {
   },
 }
 
-const gatsbySourceFileSystem = {
+const imageAssets = {
   resolve: 'gatsby-source-filesystem',
   options: {
-    name: 'assets',
+    name: 'images',
     path: `${__dirname}/static/images`,
   },
+}
+
+const soundAssets = {
+  resolve: 'gatsby-source-filesystem',
+  options: {
+    name: 'sounds',
+    path: `${__dirname}/static/sounds`,
+  },
+}
+
+const gatsbySourceFileSystem = {
+  imageAssets,
+  soundAssets,
 }
 
 module.exports = {
@@ -40,7 +53,8 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    gatsbySourceFileSystem,
+    gatsbySourceFileSystem.imageAssets,
+    gatsbySourceFileSystem.soundAssets,
     'gatsby-plugin-postcss',
     'gatsby-plugin-sass',
   ],

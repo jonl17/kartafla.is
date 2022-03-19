@@ -5,6 +5,7 @@ import Bio from '@src/components/Bio'
 import Potato3D from '@src/components/Potato3D'
 import ControlPanel from '@src/components/ControlPanel'
 import Projects from '@src/components/Projects'
+import StartScreen from '@src/components/StartScreen/StartScreen'
 
 export default function Home() {
   const { currentColor } = useBackgroundStore()
@@ -22,6 +23,7 @@ export default function Home() {
       </div>
       <ControlPanel className='w-32 absolute top-5 right-5 lg:right-10 lg:top-10' />
       <Projects />
+      <StartScreen />
     </div>
   )
 }
