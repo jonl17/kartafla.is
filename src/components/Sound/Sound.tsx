@@ -12,6 +12,8 @@ const Sound = ({ play, sound }: Props) => {
   useEffect(() => {
     if (play && audioRef.current) {
       audioRef.current?.play()
+    } else {
+      audioRef.current?.pause()
     }
   }, [play])
 

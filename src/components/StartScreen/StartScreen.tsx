@@ -5,8 +5,6 @@ import cn from 'classnames'
 const StartScreen = () => {
   const { toggleStart, started } = useGame()
 
-  console.log(started)
-
   return (
     <button
       onClick={() => toggleStart()}

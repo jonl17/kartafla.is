@@ -4,6 +4,7 @@ import cn from 'classnames'
 import Sound from '@cmp/Sound'
 import { graphql, useStaticQuery } from 'gatsby'
 import { ISound } from '@src/types'
+import { useGame } from '@src/store/gameStore'
 
 interface IControlPanel {
   className?: string
@@ -28,6 +29,8 @@ const ControlPanel = ({ className }: IControlPanel) => {
     useBackgroundStore()
 
   const sounds = useGetSounds()
+
+  const { started } = useGame()
 
   const shouldPlay = (colorName: string, soundName: string) => {
     if (colorName === 'black' && soundName === 'dark')
@@ -62,7 +65,9 @@ const ControlPanel = ({ className }: IControlPanel) => {
       </div>
       {sounds.map((sound, key) => (
         <Sound
-          play={shouldPlay(currentColor.name, sound.name)}
+          play={
+            started && shouldPlay(currentColor.name, sound.name)
+          }
           sound={sound}
           key={key}
         />
